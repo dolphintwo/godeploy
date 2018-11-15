@@ -1,0 +1,20 @@
+# Kubenrtes version, only support 1.7.0+.
+kube_version: 1.11.4
+
+# CRI plugin,
+# Supported runtime: docker, containerd.
+cri_plugin: docker
+
+# CNI plugin,
+# Supported network: flannel, calico, canal, weave or router.
+network: calico
+pod_network_cidr: 10.244.0.0/16
+
+# CNI opts: flannel(--iface=enp0s8), calico(interface=enp0s8), canal(enp0s8).
+cni_iface: interface=eth1
+
+lb_vip_address: 172.16.35.9
+
+# Extra addons
+kube_dashboard: true
+kube_monitoring: true
